@@ -1,0 +1,164 @@
+*{
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: Arial, Helvetica, sans-serif;
+
+}
+body {
+
+  
+  background: linear-gradient(to bottom, #dbeafe, #ede9fe, #fce7f3);
+  color:#1e3a8a ;
+  line-height: 1.6;
+}
+
+/* ===================== HEADER / NAVBAR ===================== */
+/* ===================== HEADER / NAVBAR ===================== */
+header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 1rem 2rem;
+  background: white;
+  box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+  position: sticky;
+  top: 0;
+  z-index: 1000;
+}
+
+header h1 {
+  margin: 0;
+  font-size: 28px;
+  font-weight: bold;
+  color: black;
+}
+
+nav {
+  display: flex;
+  gap: 25px;
+}
+
+nav a {
+  text-decoration: none;
+  color: black;
+  font-size: 18px;
+  font-weight: bold;
+  transition: 0.3s;
+}
+
+nav a:hover,
+nav a.active {
+  color: #6b4bff;
+  text-decoration: underline;
+}
+
+/* Hamburger menu */
+.menu-toggle {
+  display: none;
+  font-size: 28px;
+  cursor: pointer;
+}
+
+/* FAQ Section */
+.faq-wrapper {
+  max-width: 900px;
+  margin: 40px auto;
+  padding: 20px;
+  text-align: center;
+}
+
+.page-title {
+  font-size: 2.5rem;
+  font-weight: 800;
+  margin-bottom: 1rem;
+}
+
+.intro {
+  font-size: 1.1rem;
+  color: #374151;
+  margin-bottom: 2rem;
+}
+
+.faq-container {
+  text-align: left;
+}
+
+.faq-item {
+  background: white;
+  border-radius: 0.8rem;
+  padding: 1rem 1.5rem;
+  margin-bottom: 1rem;
+  box-shadow: 0 2px 6px rgba(0,0,0,0.1);
+}
+
+.faq-question {
+  font-size: 1.2rem;
+  color: #8b5cf6;
+  cursor: pointer;
+  margin: 0;
+}
+
+.faq-answer {
+  display: none;
+  color: #374151;
+  margin-top: 0.5rem;
+}
+
+.faq-answer.show {
+  display: block;
+}
+
+/* Footer */
+footer {
+  margin-top: 4rem;
+  padding: 1rem;
+  background: #f3f4f6;;
+  text-align: center;
+  color: black;
+  font-size: 0.9rem;
+  box-shadow: 0 -2px 4px rgba(0,0,0,0.05);
+}
+
+/** ===================== RESPONSIVE ===================== */
+@media (max-width: 768px) {
+  nav {
+    display: none;
+    flex-direction: column;
+    background: #f3f4f6;
+    position: absolute;
+    top: 70px;
+    right: 20px;
+    padding: 15px;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0,0,0,0.2);
+  }
+
+  nav.show {
+    display: flex;
+  }
+
+  .menu-toggle {
+    display: block;
+  }
+}
+
+@media (max-width: 480px) {
+  header {
+    flex-direction: row;
+    justify-content: space-between;
+  }
+
+  nav {
+    top: 60px;
+    right: 10px;
+  }
+
+  .page-title {
+    font-size: 2rem;
+  }
+
+  .intro {
+    font-size: 1rem;
+  }
+}

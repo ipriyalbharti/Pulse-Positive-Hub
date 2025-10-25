@@ -1,0 +1,185 @@
+/* ===================== RESET STYLES ===================== */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: Arial, Helvetica, sans-serif;
+}
+
+/* ===================== BODY ===================== */
+body {
+  background: linear-gradient(to bottom, #dbeafe, #ede9fe, #fce7f3); /* page background gradient */
+  color: #1e3a8a; /* default text color */
+  line-height: 1.6;
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column; /* push footer to bottom */
+}
+
+/* ===================== HEADER / NAVBAR ===================== */
+header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 1rem 2rem;
+  background: white;
+  box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+  position: sticky;
+  top: 0;
+  z-index: 1000;
+}
+
+header h1 {
+  margin: 0;
+  font-size: 28px;
+  font-weight: bold;
+  color: black;
+}
+
+/* Navigation links */
+nav {
+  display: flex;
+  gap: 25px;
+}
+
+nav a {
+  text-decoration: none;
+  color: black;
+  font-size: 18px;
+  font-weight: bold;
+  transition: 0.3s;
+}
+
+nav a:hover,
+nav a.active {
+  color: #6b4bff; /* highlight active or hovered link */
+  text-decoration: underline;
+}
+
+/* Hamburger menu button (hidden on desktop) */
+.menu-toggle {
+  display: none;
+  font-size: 28px;
+  cursor: pointer;
+}
+
+/* ===================== CONTACT SECTION ===================== */
+main.contact-wrapper {
+  flex: 1; /* ensures footer stays at bottom */
+  max-width: 900px;
+  margin: 40px auto;
+  padding: 20px;
+  text-align: center;
+}
+
+/* Page title */
+.page-title {
+  font-size: 4.4rem;
+  font-weight: 800;
+  color: #1e3a8a;
+  margin-bottom: 1rem;
+}
+
+/* Intro text */
+.intro {
+  max-width: 800px;
+  margin: 0 auto 40px;
+  font-size: 1.3rem;
+  color: #374151;
+}
+
+/* Grid container for contact cards */
+.contact-content {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  gap: 24px;
+}
+
+/* ===================== CONTACT CARDS ===================== */
+.contact-card {
+  background: white;
+  padding: 2rem; /* card size remains same */
+  border-radius: 1rem;
+  text-align: center;
+  box-shadow: 0 2px 6px rgba(0,0,0,0.1);
+  transition: transform 0.25s;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  min-height: 300px; /* card size unchanged */
+}
+
+.contact-card:hover {
+  transform: translateY(-4px); /* subtle hover effect */
+}
+
+/* Card heading */
+.contact-card h2 {
+  color: #8b5cf6;
+  margin-bottom: 8px; /* reduce space below heading */
+  font-size: 2rem;
+  font-weight: 700;
+}
+
+/* Card links and text */
+.contact-card a,
+.contact-card p {
+  color: black;
+  text-decoration: none;
+  font-size: 1.2rem;
+  line-height: 1.4; /* tighter text spacing */
+}
+
+.contact-card a:hover {
+  text-decoration: underline;
+  color:  #1e3a8a;
+}
+
+/* ===================== FOOTER ===================== */
+footer {
+  margin-top: auto; /* push footer to bottom */
+  padding: 1rem;
+  background: #f3f4f6;
+  text-align: center;
+  color: black;
+  font-size: 0.9rem;
+  box-shadow: 0 -2px 4px rgba(0,0,0,0.05);
+}
+
+/* ===================== RESPONSIVE DESIGN ===================== */
+@media (max-width: 768px) {
+  nav {
+    display: none; /* hide nav on small screens */
+    flex-direction: column;
+    position: absolute;
+    top: 70px;
+    right: 20px;
+    background: white;
+    padding: 15px;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0,0,0,0.2);
+    width: 200px;
+    z-index: 999;
+  }
+  nav.show {
+    display: flex; /* show menu when toggled */
+  }
+
+  .menu-toggle {
+    display: block; /* show hamburger button */
+  }
+}
+
+@media (max-width: 480px) {
+  header {
+    flex-direction: column;
+    gap: 8px;
+  }
+  .page-title {
+    font-size: 2rem;
+  }
+  .intro {
+    font-size: 1rem;
+  }
+}
+

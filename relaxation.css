@@ -1,0 +1,286 @@
+/* ===================== RESET STYLES ===================== */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: Arial, Helvetica, sans-serif;
+}
+
+/* ===================== BODY ===================== */
+body {
+  background: linear-gradient(to bottom, #dbeafe, #ede9fe, #fce7f3); /* page background gradient */
+  color: #1e3a8a; /* default text color */
+  line-height: 1.6;
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column; /* push footer to bottom */
+}
+
+/* ===================== HEADER / NAVBAR ===================== */
+header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 1rem 2rem;
+  background: white;
+  box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+  position: sticky;
+  top: 0;
+  z-index: 1000;
+}
+
+header h1 {
+  margin: 0;
+  font-size: 28px;
+  font-weight: bold;
+  color: black;
+}
+
+/* Navigation links */
+nav {
+  display: flex;
+  gap: 25px;
+}
+
+nav a {
+  text-decoration: none;
+  color: black;
+  font-size: 18px;
+  font-weight: bold;
+  transition: 0.3s;
+}
+
+nav a:hover,
+nav a.active {
+  color: #6b4bff;
+  text-decoration: underline;
+}
+
+/* Hamburger menu button (hidden on desktop) */
+.menu-toggle {
+  display: none;
+  font-size: 28px;
+  cursor: pointer;
+  z-index: 1001; /* ensure toggle is above nav */
+}
+
+/* ===================== BUTTONS ===================== */
+.btn {
+  display: inline-block;
+  background: #8b5cf6;
+  color: #fff;
+  padding: 10px 16px;
+  border: none;
+  border-radius: 8px;
+  font-size: 15px;
+  transition: background .3s, transform .2s;
+  cursor: pointer;
+}
+.btn:hover {
+  background: #7c3aed;
+  transform: translateY(-2px);
+}
+.btn:active {
+  transform: translateY(0);
+}
+.btn-ghost {
+  background: transparent;
+  border: 1px solid #8b5cf6;
+  color: #8b5cf6;
+}
+
+/* ===================== LAYOUT ===================== */
+.wrapper {
+  max-width: 1080px;
+  margin: 0 auto;
+  padding: 28px 18px;
+}
+.page-title {
+  text-align: center;
+  font-size: 30px;
+  color: #1e3a8a;
+  margin-bottom: 8px;
+  font-weight: 700;
+}
+.tagline {
+  text-align: center;
+  font-size: 18px;
+  color: #6b7280;
+  margin-bottom: 24px;
+}
+
+/* ===================== CARDS ===================== */
+.cards {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr); /* two cards in same row */
+  gap: 32px;
+}
+.card {
+  background: #fff;
+  padding: 22px;
+  border-radius: 14px;
+  text-align: center;
+  box-shadow: 0 3px 10px rgba(0,0,0,0.08);
+  transition: transform .25s;
+}
+.card:hover {
+  transform: translateY(-4px);
+}
+.card h2 {
+  color: #8b5cf6;
+  margin-bottom: 10px;
+  font-size: 20px;
+}
+.muted {
+  color: #6b7280;
+  margin-bottom: 14px;
+  font-size: 14px;
+}
+
+/* ===================== BREATHING CIRCLE ===================== */
+.breathing-circle {
+  width: 220px;
+  height: 220px;
+  margin: 18px auto;
+  border-radius: 50%;
+  background: linear-gradient(145deg, #8b5cf6, #c4b5fd);
+  color: #fff;
+  display: grid;
+  place-items: center;
+  transition: transform 1s ease-in-out;
+  box-shadow: inset 0 0 0 6px rgba(255,255,255,0.25), 0 4px 12px rgba(0,0,0,0.15);
+}
+.breathing-circle span {
+  font-size: 18px;
+  font-weight: 600;
+}
+.breathing-circle.hold {
+  background: #a78bfa; /* optional hold color */
+}
+
+/* ===================== CONTROLS ===================== */
+.controls {
+  display: flex;
+  gap: 12px;
+  justify-content: center;
+  margin: 14px 0 8px;
+  flex-wrap: wrap;
+}
+.row {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 10px;
+  margin: 10px 0;
+}
+.label {
+  min-width: 75px;
+  text-align: right;
+  color: #1e3a8a;
+  font-size: 14px;
+}
+.select {
+  padding: 8px 12px;
+  border-radius: 8px;
+  border: 1px solid #ddd;
+  font-size: 14px;
+}
+
+/* ===================== AUDIO & SOUNDS ===================== */
+audio {
+  width: 100%;
+  margin: 8px 0 12px;
+  border-radius: 6px;
+}
+.sound-grid {
+  display: flex;
+  gap: 12px;
+  justify-content: center;
+  margin: 14px 0;
+  flex-wrap: wrap;
+}
+
+/* ===================== DOWNLOADS ===================== */
+.downloads {
+  display: flex;
+  gap: 14px;
+  flex-wrap: wrap;
+  justify-content: center;
+  margin: 10px 0 14px;
+}
+.link {
+  color: #8b5cf6;
+  text-decoration: none;
+  font-weight: 600;
+}
+.link:hover {
+  text-decoration: underline;
+}
+
+/* ===================== QUOTE ===================== */
+.quote {
+  margin: 16px auto;
+  max-width: 540px;
+  font-size: 17px;
+  color: #1e3a8a;
+  font-style: italic;
+  text-align: center;
+}
+
+/* ===================== NAV BUTTONS ===================== */
+.nav-buttons {
+  display: flex;
+  justify-content: center;
+  gap: 16px;
+  margin-top: 24px;
+  flex-wrap: wrap;
+}
+
+/* ===================== FOOTER ===================== */
+footer {
+  margin-top: auto;
+  padding: 1rem;
+  background: #f3f4f6;
+  text-align: center;
+  color: black;
+  font-size: 0.9rem;
+  box-shadow: 0 -2px 4px rgba(0,0,0,0.05);
+}
+
+/* ===================== RESPONSIVE DESIGN ===================== */
+@media (max-width: 768px) {
+  nav {
+    display: none; /* hide nav on small screens */
+    flex-direction: column;
+    position: absolute;
+    top: 70px;
+    right: 20px;
+    background: white;
+    padding: 15px;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0,0,0,0.2);
+    width: 200px;
+    z-index: 999;
+  }
+  nav.show {
+    display: flex; /* show menu when toggled */
+  }
+
+  .menu-toggle {
+    display: block; /* show hamburger button */
+  }
+
+  /* stack cards vertically on smaller screens */
+  .cards {
+    grid-template-columns: 1fr;
+  }
+}
+
+@media (max-width: 480px) {
+  header {
+    flex-direction: column;
+    gap: 8px;
+  }
+}
+
+

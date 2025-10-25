@@ -1,0 +1,233 @@
+/* ===================== GLOBAL STYLES ===================== */
+body {
+  margin: 0; /* ✅ Remove default margin */
+  padding: 0; /* ✅ Remove default padding */
+  font-family: Arial, Helvetica, sans-serif; /* ✅ Text font for whole page */
+  background: linear-gradient(to bottom, #dbeafe, #ede9fe, #fce7f3); /* ✅ Page background color */
+  color: #333; /* ✅ Default text color */
+  line-height: 1.6; /* ✅ Space between lines */
+}
+
+/* ===================== HEADER / NAVBAR ===================== */
+header {
+  background-color: white; /* Header background color */
+  color : black; /* ✅ Header text color */
+  height: 80px; /* ✅ Fixed height for header */
+  padding: 0 20px; /* ✅ Space inside header left/right */
+  display: flex; /* ✅ Arrange logo and navigation in a row */
+  justify-content: space-between; /* ✅ Space between logo and navigation links */
+  align-items: center; /* ✅ Vertically center content */
+  box-sizing: border-box; /* ✅ Include padding inside height */
+  position: sticky; /* ✅ Header sticks on top when scrolling */
+  top: 0; /* ✅ Stick at top */
+  z-index: 1000; /* ✅ Stay above other page content */
+  box-shadow: 0 2px 5px rgba(0,0,0,0.1); /* ✅ Small shadow under header */
+}
+
+header h1 {
+  margin: 0; /* ✅ Remove default margin */
+  font-size: 28px; /* ✅ Logo / Site name size */
+  font-weight: bold; /* ✅ Make logo text bold */
+}
+
+/* ===================== NAVIGATION LINKS ===================== */
+nav {
+  display: flex; /* ✅ Horizontal menu links */
+  gap: 25px; /* ✅ Space between each navigation link */
+}
+
+nav a {
+  color: black; /* ✅ Navigation link color */
+  text-decoration: none; /* ✅ Remove underline from links */
+  font-size: 18px; /* ✅ Navigation text size */
+  font-weight: bold; /* ✅ Make navigation text bold */
+  transition: 0.2s; /* ✅ Smooth effect on hover */
+}
+
+nav a:hover {
+  text-decoration: underline; /* ✅ Underline when mouse over */
+  color: #6b4bff; /* ✅ Change color on hover */
+}
+
+/* ===================== HAMBURGER MENU BUTTON ===================== */
+.menu-toggle {
+  display: none; /* ✅ Hide button on desktop */
+  font-size: 28px; /* ✅ Size of hamburger icon */
+  cursor: pointer; /* ✅ Pointer on hover */
+}
+
+/* ===================== HERO SECTION ===================== */
+.hero {
+  text-align: center; /* ✅ Center text */
+  padding: 60px 20px; /* ✅ Space inside hero section */
+}
+
+.hero h2 {
+  font-size: 60px; /* ✅ Big heading / main message */
+  margin-bottom: 10px; /* ✅ Space below heading */
+  color: #1e3a8a; /* ✅ Heading color */
+}
+
+.hero p {
+  font-size: 18px; /* ✅ Paragraph under heading */
+  margin-bottom: 30px; /* ✅ Space below paragraph */
+  color: #222; /* ✅ Paragraph text color */
+}
+
+/* ===================== BUTTON ===================== */
+.btn-primary {
+  background: #7c6cff; /* ✅ Button background color */
+  color: white; /* ✅ Button text color */
+  border: none; /* ✅ Remove border */
+  padding: 14px 30px; /* ✅ Space inside button */
+  font-size: 18px; /* ✅ Button text size */
+  border-radius: 6px; /* ✅ Rounded corners */
+  cursor: pointer; /* ✅ Pointer on hover */
+  transition: background 0.3s ease; /* ✅ Smooth color change on hover */
+}
+
+.btn-primary:hover {
+  background: #6753e0; /* ✅ Darker color on hover */
+}
+
+/* ===================== CARDS SECTION ===================== */
+.cards {
+  display: flex; /* ✅ Arrange cards in a row */
+  justify-content: center; /* ✅ Center cards */
+  gap: 30px; /* ✅ Space between cards */
+  margin-top: 50px; /* ✅ Space above cards */
+  flex-wrap: wrap; /* ✅ Move to next line if too many cards */
+}
+
+.card {
+  background: white; /* ✅ Card background color */
+  border: 1px solid #ddd; /* ✅ Card border */
+  border-radius: 12px; /* ✅ Rounded corners */
+  padding: 30px; /* ✅ Space inside card */
+  width: 320px; /* ✅ Card width */
+  text-align: center; /* ✅ Center card content */
+  box-shadow: 0 4px 8px rgba(0,0,0,0.08); /* ✅ Card shadow */
+  transition: transform 0.3s ease, box-shadow 0.3s ease; /* ✅ Hover animation */
+  cursor: pointer; /* ✅ Pointer on hover */
+  text-decoration: none; /* ✅ Remove underline for links */
+  color: inherit; /* ✅ Keep original text color */
+}
+
+.card:hover {
+  transform: translateY(-5px); /* ✅ Card moves up on hover */
+  box-shadow: 0 6px 14px rgba(0,0,0,0.12); /* ✅ Shadow becomes stronger */
+}
+
+.card h3 {
+  font-size: 22px; /* ✅ Card title size */
+  margin-bottom: 15px; /* ✅ Space below title */
+  color: #222; /* ✅ Card title color */
+}
+
+.card p {
+  font-size: 16px; /* ✅ Card paragraph size */
+  color: #555; /* ✅ Card paragraph color */
+  line-height: 1.5; /* ✅ Space between lines in card text */
+}
+
+/* ===================== ICON IN CARD ===================== */
+.feature-icon {
+  font-size: 42px; /* ✅ Icon size */
+  color: #7c6cff; /* ✅ Icon color */
+  margin-bottom: 12px; /* ✅ Space below icon */
+}
+
+/* ===================== FOOTER ===================== */
+footer {
+  background: #f3f4f6; /* ✅ Footer background color */
+  color: black; /* ✅ Footer text color */
+  text-align: center; /* ✅ Center footer text */
+  height: 60px; /* ✅ Fixed footer height */
+  padding: 0 20px; /* ✅ Space inside footer left/right */
+  line-height: 60px; /* ✅ Center text vertically */
+  font-size: 14px; /* ✅ Footer text size */
+  box-sizing: border-box; /* ✅ Include padding in height */
+}
+
+/* ===================== RESPONSIVE DESIGN ===================== */
+
+/* Tablets (≤ 768px) */
+@media (max-width: 768px) {
+  header {
+    height: 70px; /* ✅ Smaller header for tablet */
+    padding: 0 15px; /* ✅ Less horizontal padding */
+  }
+
+  header h1 {
+    font-size: 22px; /* ✅ Smaller logo text */
+  }
+
+  footer {
+    height: 50px; /* ✅ Smaller footer */
+    line-height: 50px; /* ✅ Center text vertically */
+    padding: 0 15px; /* ✅ Less padding */
+  }
+
+  nav {
+    display: none; /* ✅ Hide menu by default */
+    flex-direction: column; /* ✅ Vertical menu */
+    background: #f3f4f6; /* ✅ Menu background */
+    position: absolute; /* ✅ Position over content */
+    top: 70px; /* ✅ Below header */
+    right: 20px; /* ✅ Align right */
+    padding: 15px; /* ✅ Space inside menu */
+    border-radius: 8px; /* ✅ Rounded corners */
+    box-shadow: 0 4px 8px rgba(0,0,0,0.2); /* ✅ Shadow */
+  }
+
+  nav.show {
+    display: flex; /* ✅ Show menu when toggled */
+  }
+
+  .menu-toggle {
+    display: block; /* ✅ Show hamburger button */
+  }
+}
+
+/* Mobiles (≤ 480px) */
+@media (max-width: 480px) {
+  header {
+    height: 60px; /* ✅ Smaller header for mobile */
+    padding: 0 10px; /* ✅ Less horizontal padding */
+  }
+
+  header h1 {
+    font-size: 20px; /* ✅ Smaller logo text */
+  }
+
+  footer {
+    height: 45px; /* ✅ Smaller footer */
+    line-height: 45px; /* ✅ Center text vertically */
+    padding: 0 10px; /* ✅ Less padding */
+  }
+
+  .cards {
+    flex-direction: column; /* ✅ Stack cards vertically */
+    align-items: center; /* ✅ Center cards */
+  }
+
+  .card {
+    width: 90%; /* ✅ Card almost full width */
+  }
+
+  .hero h2 {
+    font-size: 28px; /* ✅ Smaller hero heading */
+  }
+
+  .hero p {
+    font-size: 16px; /* ✅ Smaller paragraph */
+  }
+
+  .btn-primary {
+    font-size: 16px; /* ✅ Smaller button text */
+    padding: 12px 24px; /* ✅ Smaller button padding */
+  }
+}
+
+
+

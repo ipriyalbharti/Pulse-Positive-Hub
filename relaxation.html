@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Relaxation & Breathing | Positive Pulse Hub</title>
+  <link rel="stylesheet" href="relaxation.css">
+</head>
+<body>
+  <!-- Header -->
+  <header>
+    <h1 id="logo">POSITIVE PULSE HUB</h1>
+    <span class="menu-toggle">☰</span>
+    <nav id="navbar">
+      <a href="homepage.html">Home</a>
+
+      <a href="about.html">About</a>
+      <a href="faq.html">FAQ</a>
+       <a href="feedback.html">Contact Us</a>
+    </nav>
+  </header>
+  
+  <!-- Main Content -->
+  <main class="wrapper">
+    <h1 class="page-title">Relaxation & Breathing Room</h1>
+    <p class="tagline">Stress Checked ✅ Now Time to Unwind 🎵</p>
+
+    <section class="cards">
+      <!-- Breathing Exercise Card -->
+      <div class="card">
+        <h2>Breathing Exercise</h2>
+        <div class="breathing-circle">
+          <span id="breathText">Click Start to Begin</span>
+        </div>
+        <div class="controls">
+          <button id="startBtn" class="btn">Start</button>
+          <button id="pauseBtn" class="btn">Pause</button>
+          <button id="resetBtn" class="btn btn-ghost">Reset</button>
+        </div>
+        <div class="row">
+          <label for="pattern" class="label">Pattern:</label>
+          <select id="pattern" class="select">
+            <option value="4-4">Balanced (4–4)</option>
+            <option value="4-7-8">4–7–8</option>
+            <option value="box">Box (4–4–4–4)</option>
+          </select>
+        </div>
+        <div class="row">
+          <label for="duration" class="label">Duration:</label>
+          <select id="duration" class="select">
+            <option value="60">1 Minute</option>
+            <option value="180">3 Minutes</option>
+            <option value="300">5 Minutes</option>
+          </select>
+        </div>
+      </div>
+
+      <!-- Relaxation Zone Card -->
+      <div class="card">
+        <h2>Relaxation Zone</h2>
+        <p class="muted">Listen to calming sounds or music while you unwind.</p>
+
+        <!-- Single Audio Player -->
+        <audio id="musicPlayer" controls preload="metadata">
+          <source src="audio/relax.mp3" type="audio/mp3" />
+          Your browser does not support the audio element.
+        </audio>
+
+        <!-- Nature Sounds Buttons -->
+        <div class="sound-grid">
+          <button class="btn" data-sound="relax">Relax Music</button>
+          <button class="btn" data-sound="rain">Rain</button>
+          <button class="btn" data-sound="ocean">Ocean</button>
+          <button class="btn" data-sound="forest">Forest</button>
+        </div>
+
+        <!-- Downloads -->
+        <div class="downloads">
+          <a class="link" href="audio/rain.mp3" download>Download Rain</a>
+          <a class="link" href="audio/ocean.mp3" download>Download Ocean</a>
+          <a class="link" href="audio/forest.mp3" download>Download Forest</a>
+          <a class="link" href="audio/relax.mp3" download>Download Relax</a>
+         
+        </div>
+
+        <!-- Motivational Quote -->
+        <blockquote id="quote" class="quote">“Take a deep breath. You’re stronger than you think.”</blockquote>
+        <button id="newQuoteBtn" class="btn">New Quote</button>
+      </div>
+    </section>
+
+    <!-- Navigation Buttons -->
+    <div class="nav-buttons">
+      <button class="btn" id="continueBtn">Continue Your Relaxation Journey</button>
+    </div>
+  </main>
+
+  <!-- Footer -->
+  <footer>
+    <p>&copy; 2025 Positive Pulse Hub. All rights reserved.</p>
+  </footer>
+
+  <script src="relaxation.js"></script>
+</body>
+</html>

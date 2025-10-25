@@ -1,0 +1,191 @@
+/* ===================== RESET STYLES ===================== */ 
+* { margin: 0;
+   padding: 0; 
+   box-sizing: border-box;
+    font-family: Arial, Helvetica, sans-serif;
+   } 
+   /* ===================== BODY ===================== */ 
+   body { background: linear-gradient(to bottom, #dbeafe, #ede9fe, #fce7f3);
+     /* page background gradient */ 
+     color: #1e3a8a; /* default text color */
+      line-height: 1.6; 
+      min-height: 100vh; 
+      display: flex;
+      flex-direction: column; /* push footer to bottom */ }
+/* ===================== HEADER / NAVBAR ===================== */
+header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 1rem 2rem;
+  background: white;
+  box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+  position: sticky;
+  top: 0;
+  z-index: 1000;
+}
+
+header h1 {
+  margin: 0;
+  font-size: 28px;
+  font-weight: bold;
+  color: black;
+}
+
+/* Navigation links */
+nav {
+  display: flex;
+  gap: 25px;
+}
+
+nav a {
+  text-decoration: none;
+  color: black;
+  font-size: 18px;
+  font-weight: bold;
+  transition: 0.3s;
+}
+
+nav a:hover,
+nav a.active {
+  color: #6b4bff;
+  text-decoration: underline;
+}
+
+/* Hamburger menu button (hidden on desktop) */
+.menu-toggle {
+  display: none;
+  font-size: 28px;
+  cursor: pointer;
+  z-index: 1001; /* ensure toggle is above nav */
+}
+
+
+/* -------------------- Intro Section -------------------- */
+.intro {
+  text-align: center; /* center the intro text */
+  padding: 30px 20px; /* top/bottom space */
+}
+
+.intro h1 {
+  font-size: 42px; /* large title */
+  margin-bottom: 10px; /* space below title */
+  color:#1e3a8a;
+}
+
+.intro p {
+  font-size: 20px; /* bigger subheading */
+  margin-bottom: 30px; /* space before cards */
+  color: #333;
+}
+
+/* -------------------- Cards Grid -------------------- */
+.cards-grid {
+  display: grid; /* arrange cards in grid */
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); /* responsive columns */
+  gap: 25px; /* space between cards */
+  max-width: 1100px; /* grid max width */
+  margin: 0 auto; /* center grid */
+  padding: 20px 20px 80px 20px; /* padding inside grid, extra bottom for footer */
+}
+
+/* -------------------- Card -------------------- */
+.card {
+  background: #fff; /* white card background */
+  border-radius: 10px; /* rounded corners */
+  box-shadow: 0 2px 6px rgba(0,0,0,0.1); /* lifted effect */
+  overflow: hidden; /* hide anything overflowing */
+  min-height: 140px; /* enough height when closed */
+  display: flex; /* arrange header and content vertically */
+  flex-direction: column;
+  transition: all 0.3s ease; /* smooth open/close animations */
+}
+
+/* -------------------- Card Header -------------------- */
+.card-header {
+  padding: 18px; /* spacing inside header */
+  background: #1a237e; /* dark blue background */
+  color: white; /* text color */
+  font-weight: bold; 
+  cursor: pointer; /* indicates clickable */
+  text-align: center;
+  transition: background 0.3s ease; /* smooth hover effect */
+}
+
+.card-header:hover {
+  background: #283593; /* lighter blue on hover */
+}
+
+/* -------------------- Card Content (Accordion) -------------------- */
+.card-content {
+  max-height: 0; /* hide content initially */
+  overflow: hidden; /* hide content outside max-height */
+  text-align: left;
+  padding: 0 20px; /* minimal padding when closed */
+  transition: max-height 0.4s ease, padding 0.3s ease; /* smooth open/close */
+}
+
+/* Card content text spacing */
+.card-content p, 
+.card-content h4, 
+.card-content a {
+  margin-bottom: 10px;
+}
+
+/* Opened card */
+.card-content.active {
+  max-height: 1200px; /* enough height for full content */
+  padding: 20px; /* add spacing around content */
+}
+
+/* -------------------- Card Preview Message -------------------- */
+.card-preview {
+  text-align: center;
+  color: #555; /* gray text */
+  font-style: italic; /* italic style for hint */
+  padding: 30px 10px; /* inside spacing */
+  font-size: 18px; /* readable font */
+  background: #f0f0f0; /* subtle gray box */
+  border-radius: 8px; /* rounded corners */
+  margin: 10px 0; /* spacing above and below */
+  transition: opacity 0.3s ease; /* smooth fade if needed */
+}
+
+/* -------------------- Audio Box -------------------- */
+.audio-box {
+  margin: 10px 0; /* space between audio players */
+}
+
+
+
+
+/* ===================== RESPONSIVE DESIGN ===================== */
+@media (max-width: 768px) {
+  nav {
+    display: none; /* hide nav on small screens */
+    flex-direction: column;
+    position: absolute;
+    top: 70px;
+    right: 20px;
+    background: white;
+    padding: 15px;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0,0,0,0.2);
+    width: 200px;
+    z-index: 999;
+  }
+  nav.show {
+    display: flex; /* show menu when toggled */
+  }
+
+  .menu-toggle {
+    display: block; /* show hamburger button */
+  }
+}
+
+@media (max-width: 480px) {
+  header {
+    flex-direction: column;
+    gap: 8px;
+  }
+}
